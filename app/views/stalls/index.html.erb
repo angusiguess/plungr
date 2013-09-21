@@ -1,0 +1,33 @@
+<h1>Listing stalls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Uuid</th>
+      <th>Write hash</th>
+      <th>Qr code</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stalls.each do |stall| %>
+      <tr>
+        <td><%= stall.name %></td>
+        <td><%= stall.uuid %></td>
+        <td><%= stall.write_hash %></td>
+        <td><%= stall.qr_code %></td>
+        <td><%= link_to 'Show', stall %></td>
+        <td><%= link_to 'Edit', edit_stall_path(stall) %></td>
+        <td><%= link_to 'Destroy', stall, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stall', new_stall_path %>
