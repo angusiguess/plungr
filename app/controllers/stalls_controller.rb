@@ -1,5 +1,5 @@
 class StallsController < ApplicationController
-  before_action :set_stall, only: [:show, :edit, :update, :destroy]
+  before_action :set_stall, only: [:show, :edit, :update, :destroy, :showplops]
 
   # GET /stalls
   # GET /stalls.json
@@ -35,6 +35,11 @@ class StallsController < ApplicationController
         format.json { render json: @stall.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  #SHOWPLOPS /qr/:id
+  def showplops
+    #Stall.find_by_uuid(params[:uuid])
   end
 
   # PATCH/PUT /stalls/1
