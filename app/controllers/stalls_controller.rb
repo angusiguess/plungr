@@ -50,6 +50,12 @@ class StallsController < ApplicationController
     redirect_to "/qr/#{params[:uuid]}?write_hash=#{params[:stall][:write_hash]}"
   end
 
+  def add_heart
+    s = Plop.find_by_id(:id)
+    s.heart_count+=1
+    s.save
+  end
+
   #WRITEPLOPS get /qr/:uuid
 
   # PATCH/PUT /stalls/1

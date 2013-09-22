@@ -13,6 +13,8 @@
         <blockquote class="pull-right">
           <p><%= p.message %></p>
           <small>- <%= p.author_name || "Anonymous" %></small>
+          <h6><a class="pure-button pure-button-primary" href="/plop/#{p.id}">&#9829;</a></h6>
+          <%= hidden_field :plop, :id %>
         </blockquote>
         </li>
       <% end %>

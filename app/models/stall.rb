@@ -11,6 +11,8 @@ class Stall < ActiveRecord::Base
     self.update_attribute :qr_code, qr_code_img.to_string
   end
 
+  
+
   def generate_uuid
     return SecureRandom.uuid
   end

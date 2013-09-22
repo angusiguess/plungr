@@ -3,6 +3,7 @@ Plungr::Application.routes.draw do
 
   get '/qr/:uuid', to: 'stalls#showplops'
   post '/qr/:uuid', to: 'stalls#writeplops'
+  post '/plop/:id', to: 'stalls#add_heart'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
