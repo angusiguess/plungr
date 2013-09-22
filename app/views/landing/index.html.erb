@@ -39,8 +39,15 @@
     <div class="pure-g-r content-ribbon" id="tour">
       <div class="pure-u-2-3">
         <div class="l-box">
-          <h4 class="content-subhead">Take Graffiti Further</h4>
-          <h3>Bathroom stall graffiti is cave painting for the modern age. It is social expression and sharing at its most fundamental. But it's time to evolve. We bring your bathroom stall graffiti into the cloud, so visitors can share their most profound thoughts.</h3>
+          <h4 class="content-subhead">Trending Plops</h4>
+          <% Plop.trending(5).each do |plop| %>
+            <h3>
+              <%= "\"#{plop.message}\"" %>
+              <br>
+              <em><%= "-#{plop.author_name}" %></em>
+            </h3>
+          <% end %>
+          <h3></h3>
         </div>
       </div>
       <div class="pure-u-1-3">
