@@ -18,3 +18,5 @@ Gemfile.lock
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+/public/system/dragonfly
