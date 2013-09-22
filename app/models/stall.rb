@@ -4,16 +4,16 @@ class Stall < ActiveRecord::Base
 
 	def initialize(*stall_params)
 		super(*stall_params)
-		generateUUID
-		generateWriteHash
+		self.uuid = generateUUID
+		self.write_hash = generateWriteHash(self.uuid)
 	end
 
 	def generateUUID
-		self.uuid = SecureRandom.uuid
+		return SecureRandom.uuid
 	end
 
-	def generateWriteHash
-		self.write_hash = Digest::SHA1.hexdigest self.uuid
+	def generateWriteHash(uuid)
+		return Digest::SHA1.hexdigest uuid
 	end
 
 end
