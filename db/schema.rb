@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130921232307) do
+ActiveRecord::Schema.define(version: 20130922002143) do
 
   create_table "plops", force: true do |t|
     t.string   "message"
