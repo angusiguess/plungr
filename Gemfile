@@ -37,6 +37,13 @@ end
 gem 'pry'
 gem 'rqrcode_png', :git => 'git://github.com/DCarper/rqrcode_png.git' #qr
 
+gem 'rb-readline'
+
+gem 'purecss-rails'
+
+gem 'rack-cache', :require => 'rack/cache'
+gem 'dragonfly', '~>0.9.15'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
