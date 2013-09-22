@@ -11,18 +11,36 @@
       <% @stall.plops.each do |p| %>
         <li>
         <p><%= p.message %></p>
-        <span class="plop-author">- <%= p.author || "Anonymous" %></span>
+        <span class="plop-author">- <%= p.author_name || "Anonymous" %></span>
         </li>
       <% end %>
     </ul>
   </div>
-  <div class="plop-new">
-    <% if @canwrite %>
-      <%= form_tag do %>
-        <%= hidden_field :stall, :write_hash %>
-        <%= text_area_tag(:message, "", size: "24x1") %>
-        <%= submit_tag("Plop") %>
-      <% end %>
-    <% end %>
-  </div>
+  <% if @canwrite %>
+    <div class="pure-g-r plop-new">
+      <div class="pure-u-1">
+        <%= form_tag({}, :class => "pure-form pure-form-aligned") do %>
+          <fieldset>
+            <legend>Post a Message</legend>
+
+            <%= hidden_field :stall, :write_hash %>
+
+            <div class="pure-control-group">
+              <label for="author">Author:</label>
+              <%= text_field_tag(:author_name, "Anonymous", class: "pure-input-1-2") %>
+            </div>
+
+            <div class="pure-control-group">
+              <label for="message">Message:</label>
+              <%= text_area_tag(:message, "", size: "24x10", class: "pure-input-1") %>
+            </div>
+
+            <div class="pure-controls">
+              <input name="commit" type="submit" value="Leave Your Mark" class="pure-button pure-button-primary">
+            </div>
+          </fieldset>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>

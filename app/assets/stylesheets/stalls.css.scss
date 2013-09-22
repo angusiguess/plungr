@@ -45,9 +45,9 @@ body {
   line-height: 1.4em;
 }
 
-form {
-  text-align: center;
+.new-stall form {
   background: #fd1a1a;
+  text-align: center;
 }
 
 .field {
@@ -92,16 +92,16 @@ form {
   margin-bottom: 2em;
 }
 
-.stall-content {
+.stall-content, .stall-content-body {
+  padding: 1em 1em;
 }
 
 .stall-content-header {
+  border-bottom: 1px solid #ddd;
 }
 
 .stall-content-name {
-}
-
-.stall-content-body {
+  margin: 0.5em 0 0;
 }
 
 .plop ul {
@@ -109,7 +109,7 @@ form {
 }
 
 .plop li {
-  display: inline-block;
+  display: block;
 }
 
 .plop li:nth-child(2n) {
