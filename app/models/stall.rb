@@ -14,5 +14,5 @@ class Stall < ActiveRecord::Base
 	def generateWriteHash(uuid)
 		return Digest::SHA1.hexdigest uuid
 	end
-    has_many :orders, dependent: :destroy
+    has_many :plops, dependent: :destroy
 end
