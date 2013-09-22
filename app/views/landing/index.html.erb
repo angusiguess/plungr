@@ -4,9 +4,8 @@
       <a class="pure-menu-heading" href="#">plungr</a>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#tour">Tour</a></li>
+        <li><a href="#plops">Plops</a></li>
         <li><a href="#why">Why?</a></li>
-        <li><a href="#try">Try it now!</a></li>
       </ul>
     </div>
   </div>
@@ -14,7 +13,7 @@
     <div class="pure-g-r">
       <div class="pure-u-1-3">
         <div class="l-box splash-image">
-          <%= image_tag "bathroom.jpg" %>
+          <%= image_tag "plungr.png" %>
         </div>
       </div>
       <div class="pure-u-2-3">
@@ -36,26 +35,31 @@
     </div>
   </div>
   <div class="content">
-    <div class="pure-g-r content-ribbon" id="tour">
-      <div class="pure-u-2-3">
+    <div class="pure-g-r" id="plops">
+      <div class="pure-u-1-2 content-ribbon">
         <div class="l-box">
           <h4 class="content-subhead">Trending Plops</h4>
           <% Plop.trending(5).each do |plop| %>
-            <h3>
-              <%= "\"#{plop.message}\"" %>
-              <br>
-              <em><%= "-#{plop.author_name}" %></em>
-            </h3>
+            <blockquote class="pull-right">
+              <p><%= plop.message %></p>
+              <small>- <%= plop.author_name || "Anonymous" %></small>
+            </blockquote>
           <% end %>
-          <h3></h3>
         </div>
       </div>
-      <div class="pure-u-1-3">
+      <div class="pure-u-1-2 content-ribbon">
         <div class="l-box">
-          <%= image_tag "night-club.jpg" %>
+          <h4 class="content-subhead">Latest Plops</h4>
+          <% Plop.trending(5).each do |plop| %>
+            <blockquote class="pull-right">
+              <p><%= plop.message %></p>
+              <small>- <%= plop.author_name || "Anonymous" %></small>
+            </blockquote>
+          <% end %>
         </div>
       </div>
     </div>
+  </div>
     <div class="pure-g-r" id="why">
       <div class="pure-u-1-4">
         <div class="l-box">
@@ -82,7 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="l-box ribbon" id="try">
+    <div class="l-box ribbon">
       <h2>Leave your mark.</h2>
       <p><%= link_to "Create a Stall", new_stall_path, :class => "pure-button primary-button" %></p>
     </div>
