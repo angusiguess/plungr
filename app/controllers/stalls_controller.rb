@@ -40,11 +40,11 @@ class StallsController < ApplicationController
   #SHOWPLOPS /qr/:uuid
   def showplops
     @stall = Stall.find_by_uuid(params[:uuid])
+    @canwrite = @stall.write_hash == params[:write_hash]
   end
 
-  #WRITEPLOPS /qr/:uuid?write_hash=:
+  #WRITEPLOPS get /qr/:uuid
   def writeplops
-
   end
 
   # PATCH/PUT /stalls/1
