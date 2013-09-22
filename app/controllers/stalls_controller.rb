@@ -39,7 +39,6 @@ class StallsController < ApplicationController
 
   #SHOWPLOPS /qr/:id
   def showplops
-    #Stall.find_by_uuid(params[:uuid])
   end
 
   # PATCH/PUT /stalls/1
@@ -69,7 +68,7 @@ class StallsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stall
-      @stall = Stall.find(params[:id])
+      @stall = Stall.find_by_uuid(params[:uuid])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
