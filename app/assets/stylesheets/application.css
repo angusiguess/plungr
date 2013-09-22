@@ -18,12 +18,12 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 
 body {
   margin: 0 auto;
   line-height: 1.7em;
-  font-family: 'Raleway', sans-serif;
 }
 
 a, a:visited {
@@ -68,7 +68,6 @@ body .primary-button {
   font-size: 300%;
   margin: 0em 0;
   line-height: 1.2em;
-  font-family: 'Raleway', sans-serif;
 }
 .splash .splash-subhead {
   color: #999;
