@@ -43,9 +43,11 @@ class StallsController < ApplicationController
     @canwrite = @stall.write_hash == params[:write_hash]
   end
 
-  #WRITEPLOPS get /qr/:uuid
   def writeplops
+    redirect_to "/qr/#{params[:uuid]}?write_hash=#{params[:stall][:write_hash]}"
   end
+
+  #WRITEPLOPS get /qr/:uuid
 
   # PATCH/PUT /stalls/1
   # PATCH/PUT /stalls/1.json

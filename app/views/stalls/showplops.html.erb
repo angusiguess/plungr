@@ -3,7 +3,13 @@
     <%= @stall.name %>
   </h1>
   <br />
-
+<% if @canwrite %>
+	<%= form_tag do %>
+	  <%= hidden_field :stall, :write_hash %>
+	  <%= text_area_tag(:message, "Hi, nice site", size: "24x1") %>
+	  <%= submit_tag("Plop") %>
+	<% end %>
+<% end %>
   <ul>
     <% @stall.plops.each do |p| %>
       <li>
