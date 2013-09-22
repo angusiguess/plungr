@@ -79,6 +79,9 @@ body .primary-button {
   font-size: 150%;
 }
 
+.content {
+  background: white;
+}
 
 .content .content-subhead {
   color: #999;
