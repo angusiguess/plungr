@@ -1,14 +1,19 @@
-<div>
-  <h1>
-    <%= @stall.name %>
-  </h1>
-  <br />
-
-  <ul>
-    <% @stall.plops.each do |p| %>
-      <li>
-        <%= p.message %>
-      </li>
-    <% end %>
-  </ul>
+<div class="stall-content">
+  <div class="stall-content-header pure-g-r">
+    <div class="pure-u-1-2">
+      <h1 class="stall-content-name">
+        <%= @stall.name %>
+      </h1>
+    </div>
+  </div>
+  <div class="stall-content-body">
+    <ul class="plop striped">
+      <% @stall.plops.each do |p| %>
+        <li>
+        <p><%= p.message %></p>
+        <span class="plop-author">- <%= p.author || "Anonymous" %></span>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

@@ -48,6 +48,7 @@ gem 'purecss-rails'
 gem 'rack-cache', :require => 'rack/cache'
 gem 'dragonfly', '~>0.9.15'
 gem 'fog'
+gem 'rb-readline'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
