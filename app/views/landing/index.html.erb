@@ -1,23 +1,42 @@
-<h1>Welcome to Plungr!</h1>
-
-<%= image_tag "plungr.png" %>
-
-<div>
-  <p>
-    Plungr is the premier social sharing app for restroom graffiti. Share your lavatory one-liners, privy philosophy, water closet wisdom, and can cuss words with other visitors to your illustrious place of rest.
-  </p>
-</div>
-
-<div>
-  <h2>I'm sold, where to I sign up?</h2>
-  <p>
-    To register your stall with plungr, go <%= link_to "here", new_stall_path %>.
-  </p>
-</div>
-
-<div id="menu">
-  <%= link_to "Register a stall", new_stall_path %>
-</div>
-
-<div id="trending_plops">
+<div class="content">
+  <div class="header">
+    <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
+      <a class="pure-menu-heading" href="#">plungr</a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#tour">Tour</a></li>
+        <li><a href="#why">Why?</a></li>
+        <li><a href="#try">Try it now!</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="splash">
+    <div class="pure-g-r">
+      <div class="pure-u-1-3">
+        <div class="l-box splash-image">
+        </div>
+      </div>
+      <div class="pure-u-2-3">
+        <div class="l-box splash-text">
+          <h1 class="splash-head">
+            plungr is bathroom graffiti on the web
+          </h1>
+          <h2 class="splash-subhead">
+            Become the sultan of the salle de bain
+          </h2>
+          <h3 class="splash-subhead">
+            Plungr is the premier social sharing app for restroom graffiti. Become the sultan of the salle de bain. Share your lavatory one-liners, privy philosophy, water closet wisdom, and can cuss words with other visitors to your illustrious place of rest.
+          </h3>
+          <p>
+          <%= link_to "Create a New Stall", new_stall_path, :class => "pure-button pure-button-primary" %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+  </div>
+  <div class="footer">
+  </div>
 </div>
