@@ -169,14 +169,7 @@ DEPENDENCIES
   rack-cache
   rails (= 4.0.0)
   rails_12factor
-<<<<<<< HEAD
-<<<<<<< HEAD
   rb-readline
-=======
-  rmagick
->>>>>>> Gemfile
-=======
->>>>>>> :neck_beard:
   rqrcode_png!
   sass-rails (~> 4.0.0)
   sdoc
