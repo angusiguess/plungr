@@ -34,9 +34,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'mustache'
-gem 'wkhtmltopdf-binary'
-gem 'pdfkit'
+gem 'pry'
 gem 'rqrcode_png', :git => 'git://github.com/DCarper/rqrcode_png.git' #qr
 
 # Use ActiveModel has_secure_password
