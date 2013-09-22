@@ -44,6 +44,9 @@ class StallsController < ApplicationController
   end
 
   def writeplops
+    @stall = Stall.find_by_uuid(params[:uuid])
+    @stall.plops.build(:message => params[:message])
+    @stall.save
     redirect_to "/qr/#{params[:uuid]}?write_hash=#{params[:stall][:write_hash]}"
   end
 

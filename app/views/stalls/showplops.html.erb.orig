@@ -1,0 +1,24 @@
+<<<<<<< HEAD
+<div>
+  <h1>
+    <%= @stall.name %>
+  </h1>
+  <br />
+
+  <ul>
+    <% @stall.plops.each do |p| %>
+      <li>
+        <%= p.message %>
+      </li>
+    <% end %>
+  </ul>
+</div>
+=======
+<% if @canwrite %>
+	<%= form_tag do %>
+	  <%= hidden_field :stall, :write_hash %>
+	  <%= text_area_tag(:message, "Hi, nice site", size: "24x1") %>
+	  <%= submit_tag("Plop") %>
+	<% end %>
+<% end %>
+>>>>>>> showplops posting screen and controller.
