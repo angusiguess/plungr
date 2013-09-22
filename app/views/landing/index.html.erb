@@ -50,7 +50,7 @@
       <div class="pure-u-1-2 content-ribbon">
         <div class="l-box">
           <h4 class="content-subhead">Latest Plops</h4>
-          <% Plop.trending(5).each do |plop| %>
+          <% Plop.latest(5).each do |plop| %>
             <blockquote class="pull-right">
               <p><%= plop.message %></p>
               <small>- <%= plop.author_name || "Anonymous" %></small>
