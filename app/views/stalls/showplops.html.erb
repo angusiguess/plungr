@@ -10,8 +10,10 @@
     <ul class="plop striped">
       <% @stall.plops.each do |p| %>
         <li>
-        <p><%= p.message %></p>
-        <span class="plop-author">- <%= p.author_name || "Anonymous" %></span>
+        <blockquote class="pull-right">
+          <p><%= p.message %></p>
+          <small>- <%= p.author_name || "Anonymous" %></small>
+        </blockquote>
         </li>
       <% end %>
     </ul>
@@ -32,7 +34,7 @@
 
             <div class="pure-control-group">
               <label for="message">Message:</label>
-              <%= text_area_tag(:message, "", size: "24x10", class: "pure-input-1") %>
+              <%= text_area_tag(:message, "", size: '24x10', class: "pure-input-2-3") %>
             </div>
 
             <div class="pure-controls">

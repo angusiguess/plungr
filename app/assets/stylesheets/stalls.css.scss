@@ -94,9 +94,11 @@ body {
 
 .stall-content, .stall-content-body {
   padding: 1em 1em;
+  font-size: 150%;
 }
 
 .stall-content-header {
+  padding-bottom: 1em;
   border-bottom: 1px solid #ddd;
 }
 
@@ -116,4 +118,25 @@ body {
   background: #eee;
 }
 
+blockquote {
+  padding: 1em;
+}
 
+blockquote.pull-right {
+  text-align: right;
+}
+
+blockquote.pull-right p {
+  text-align: left;
+}
+
+blockquote.pull-right small {
+  text-align: right;
+  font-style: italic;
+  color: #444;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  line-height: 1.25em;
+}
