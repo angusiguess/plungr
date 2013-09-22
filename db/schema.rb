@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922121046) do
+ActiveRecord::Schema.define(version: 20130922123723) do
 
   create_table "plops", force: true do |t|
     t.string   "message"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "stall_id"
+    t.string   "author_name"
   end
 
   create_table "stalls", force: true do |t|
