@@ -33,7 +33,7 @@ body {
   margin: 0em 0;
   font-family: 'Raleway', sans-serif;
   color: white;
-  line-height: 0.8em;
+  line-height: 1.2em;
   text-transform: uppercase;
 }
 
@@ -42,5 +42,51 @@ body {
   font-weight: 400;
   font-family: 'Gudea', sans-serif;
   font-size: 250%;
-  line-height: 2em;
+  line-height: 1.4em;
+}
+
+form {
+  text-align: center;
+  background: #fd1a1a;
+}
+
+.field {
+  padding: 5em;
+  margin: 5em;
+}
+
+.field label {
+  color: white;
+  font-size: 500%;
+  margin-bottom: 2em;
+  line-height: 3em;
+}
+
+.field input {
+  background: #fd1a1a;
+  border-top: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+  border-bottom: 1px solid #d0dde9;
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #dee3ea;
+  font-size: 300%;
+  color: white;
+  margin: 0;
+  padding: 3px 6px;
+  width: 75%;
+  display: inline-block;
+}
+
+.field input:focus {
+  outline: 0;
+}
+
+.new-button {
+  background: white;
+  color: #333;
+  font-size: 300%;
+  font-weight: 800;
+  font-family: 'Raleway', sans-serif;
 }
