@@ -8,7 +8,7 @@
   </div>
   <div class="stall-content-body">
     <ul class="plop striped">
-      <% @stall.plops.each do |p| %>
+      <% @stall.plops.latest(10).each do |p| %>
         <li>
         <blockquote class="pull-right">
           <p><%= p.message %></p>
