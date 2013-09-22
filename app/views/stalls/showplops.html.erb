@@ -4,7 +4,11 @@
   </h1>
   <br />
 
-  <% @stall.plops.each do |p| %>
-    <%= p %>
-  <% end %>
+  <ul>
+    <% @stall.plops.each do |p| %>
+      <li>
+        <%= p.message %>
+      </li>
+    <% end %>
+  </ul>
 </div>
