@@ -1,7 +1,6 @@
 require 'digest/sha1'
 
 class Stall < ActiveRecord::Base
-
 	def initialize(*stall_params)
 		super(*stall_params)
 		self.uuid = generateUUID
@@ -15,5 +14,5 @@ class Stall < ActiveRecord::Base
 	def generateWriteHash(uuid)
 		return Digest::SHA1.hexdigest uuid
 	end
-
+    has_many :orders, dependent: :destroy
 end
