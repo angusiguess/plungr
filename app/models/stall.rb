@@ -18,5 +18,10 @@ class Stall < ActiveRecord::Base
   def generate_write_hash(uuid)
     return Digest::SHA1.hexdigest uuid
   end
+
+  def latest_plops(limit=10)
+    return self.plops.order("created_at DESC").limit(limit)
+  end
+
   has_many :plops, dependent: :destroy
 end
