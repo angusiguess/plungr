@@ -43,8 +43,6 @@ end
 gem 'pry'
 gem 'rqrcode_png', :git => 'git://github.com/DCarper/rqrcode_png.git' #qr
 
-gem 'rb-readline'
-
 gem 'purecss-rails'
 
 gem 'rack-cache', :require => 'rack/cache'
