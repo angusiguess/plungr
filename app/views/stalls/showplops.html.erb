@@ -16,4 +16,13 @@
       <% end %>
     </ul>
   </div>
+  <div class="plop-new">
+    <% if @canwrite %>
+      <%= form_tag do %>
+        <%= hidden_field :stall, :write_hash %>
+        <%= text_area_tag(:message, "", size: "24x1") %>
+        <%= submit_tag("Plop") %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
