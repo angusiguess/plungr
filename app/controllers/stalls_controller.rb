@@ -1,5 +1,5 @@
 class StallsController < ApplicationController
-  before_action :set_stall, only: [:show, :edit, :update, :destroy, :showplops]
+  before_action :set_stall, only: [:show, :edit, :update, :destroy]
 
   # GET /stalls
   # GET /stalls.json
@@ -37,8 +37,14 @@ class StallsController < ApplicationController
     end
   end
 
-  #SHOWPLOPS /qr/:id
+  #SHOWPLOPS /qr/:uuid
   def showplops
+    @stall = Stall.find_by_uuid(params[:uuid])
+  end
+
+  #WRITEPLOPS /qr/:uuid?write_hash=:
+  def writeplops
+
   end
 
   # PATCH/PUT /stalls/1
@@ -68,7 +74,7 @@ class StallsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_stall
-      @stall = Stall.find_by_uuid(params[:uuid])
+      @stall = Stall.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
